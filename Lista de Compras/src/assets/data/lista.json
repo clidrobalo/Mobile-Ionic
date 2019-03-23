@@ -1,0 +1,42 @@
+[
+  {
+    "uuid": "f73e322d-d8b3-4fb2-83cd-0cc4j5bec4de",
+    "descricao": "BERG CYCLES BUTTERFLY CLASSIC",
+    "photo": "https://www.sportzone.pt/i/b98834c76e0c691a5d7654c487edc69ffea1161b.jpg",
+    "tipo": "Calçado",
+    "quantidade": "12",
+    "comprado": false
+  },
+  {
+    "uuid": "f73e322e-d8c3-4rb2-83cd-0cc4j5bec4de",
+    "descricao": "BERG CYCLES PAVEE THERMO",
+    "photo": "https://www.sportzone.pt/i/c450c46159ec1f4c778f4ad0ee08a6f71909e60f.jpg",
+    "tipo": "Casacos",
+    "quantidade": "8",
+    "adquirido": true
+  },
+  {
+    "uuid": "f83e322e-d8c3-4rb2-83cd-0cc4j5bec4de",
+    "descricao": "T-shirt de homem",
+    "photo": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/201806/08/00199455317562____6__1200x1200.jpg",
+    "tipo": "T-shit",
+    "quantidade": "2",
+    "adquirido": true
+  },
+  {
+    "uuid": "f83e422e-d8c3-4rb2-86cd-0cc4j5bec4de",
+    "descricao": "Chuteiras de futsal de homem",
+    "photo": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/201902/27/00117726283926____9__1200x1200.jpg",
+    "tipo": "Sapato",
+    "quantidade": "4",
+    "adquirido": false
+  },
+  {
+    "uuid": "f83e422e-d8c3-4rb2-86cd-0cc4j5bvc4dr",
+    "descricao": "Calções de Senhora",
+    "photo": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/201901/03/00108456801730042_1__1200x1200.jpg",
+    "tipo": "Calção",
+    "quantidade": "5",
+    "adquirido": false
+  }
+]

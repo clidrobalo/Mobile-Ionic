@@ -1,0 +1,91 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Lista de Compras
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <!-- Searchbar -->
+  <ion-searchbar (ionChange)="onSearchInputChanged($event)" placeholder="Procurar um item"></ion-searchbar>
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let item of lista">
+      <ion-card>
+      <!-- list item template -->
+      <ion-item detail [routerLink]="['/item-detalhe/', item.uuid]" routerDirection="forward">
+        <ion-thumbnail slot="start" class="movie-cover">
+          <img src="{{ item.photo }}">
+        </ion-thumbnail>
+        <ion-label text-wrap>
+          <ion-text color="dark">
+            <h2>{{ item.descricao }}</h2>
+          </ion-text>
+          <ion-text color="primary">
+            <h2>{{ item.tipo }}</h2>
+          </ion-text>
+        </ion-label>
+      </ion-item>
+
+      <ion-item>
+      <div class="" style="background-color: #1565c0; color: white; width: 55px; text-align: center;">
+        <p>{{ item.quantidade }}</p>
+      </div>
+       <!--<ion-toggle slot="end" color="secondary" [(ngModel)]="item.adquirido && item" (ngModelChange)="toggleChanged(item)"></ion-toggle>-->
+
+       <ion-toggle slot="end" color="secondary" [checked]="item.adquirido" (ionChange)="toggleChanged(item)"></ion-toggle>
+      </ion-item>
+
+      <ion-item-options side="end">
+        <ion-item-option (click)="apagarItem(item)" color="danger">
+          <ion-text >
+            Apagar
+          </ion-text>
+        </ion-item-option>
+      </ion-item-options>
+
+      <!--
+      <ion-item-options side="start">
+        <ion-item-option (click)="apagarItem(item)" color="secondary">
+          <ion-text *ngIf="!item.adicionado">
+            Adicionar ao carrinho
+          </ion-text>
+          <ion-text *ngIf="item.adicionado">
+            Remover do carrinho
+          </ion-text>
+        </ion-item-option>
+      </ion-item-options>
+      -->
+      </ion-card>
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" padding>
+      <a [routerLink]="['/add-item/']">
+        <ion-fab-button>
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+      </a>
+  </ion-fab>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button [routerLink]="['/search-item/']">
+          <ion-icon name="list-box"></ion-icon>
+          <ion-label>Lista de compra</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button [routerLink]="['/carrinho-item/']">
+          <ion-icon name="cart"></ion-icon>
+          <ion-label>Carrinho</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

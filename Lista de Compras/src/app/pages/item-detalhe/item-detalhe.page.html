@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Detalhe do item</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header color="dark">
+      <div style="display: inline-block;">{{item?.descricao}}</div>
+      <div class="" style="background-color: #1565c0; color: white; width: 40px; height: 40px; padding-top:12px; text-align: center; position: absolute; right: 10px; top: 4px; display: inline-block;">
+        {{ item.quantidade }}
+      </div>
+      <ion-badge slot="end">{{item?.quantidade}}</ion-badge>
+    </ion-card-header>
+    <ion-img [src]="item?.photo"></ion-img>
+
+    <ion-card>
+      <ion-item>
+        <ion-label color="primary" >{{item?.tipo}}</ion-label>
+        <ion-button fill="outline" slot="end">Editar</ion-button>
+      </ion-item>
+    </ion-card>
+  </ion-card>
+
+</ion-content>
